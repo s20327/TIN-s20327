@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Formularz</title>
+  <style>
+    form {
+      font-size: 1.2em;
+      margin: 0 auto;
+      width: 400px;
+      padding: 20px;
+      background-color: #f7f7f7;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="password"], select, textarea {
+      font-size: 1em;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+    }
+    input[type="submit"], input[type="reset"] {
+      font-size: 1.2em;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #3e8e41;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .required-label {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <label for="name">Imię:</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required>
+  <label for="password">Hasło:</label>
+  <input type="password" id="password" name="password" required>
+  <label for="gender">Płeć:</label>
+  <input type="radio" id="male" name="gender" value="male" checked>
+  <label for="male">Mężczyzna</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Kobieta</label>
+  <br>
+  <label for="country">Kraj:</label>
+  <select id="country" name="country">
+    <option value="poland">Polska</option>
+    <option value="germany">Niemcy</option>
+    <option value="uk">Wielka Brytania</option>
+  </select>
+  <br>
+  <label for="message">Wiadomość:</label>
+  <textarea id="message" name="message"></textarea>
+  <br>
+  <label>
+    <input type="checkbox" name="terms" required>
+    Akceptuję regulamin
+  </label>
+  <br>
+  <input type="submit" value="Wyślij">
+  <input type="reset" value="Resetuj">
+</form>
+</body>
+</html>
